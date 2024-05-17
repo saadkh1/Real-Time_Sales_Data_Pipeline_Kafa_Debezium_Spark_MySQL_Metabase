@@ -1,0 +1,17 @@
+{
+    "name": "Jendouba-Sales-Connector",
+    "config": {
+      "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+      "tasksMax": 1,
+      "database.hostname": "Jendouba_Host",
+      "database.port": "3306",
+      "database.user": "root",
+      "database.password": "secret",
+      "database.server.id": "1",
+      "database.whitelist": "jendouba_sales_db",
+      "table.whitelist": "jendouba_sales_db.jendouba_sales",
+      "topic.prefix": "JendoubaSales",
+      "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+      "schema.history.internal.kafka.topic": "schemahistory.jendouba_sales_database"
+    }
+  }  

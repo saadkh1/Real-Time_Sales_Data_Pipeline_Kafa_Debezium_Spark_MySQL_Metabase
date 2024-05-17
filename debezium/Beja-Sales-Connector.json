@@ -1,0 +1,17 @@
+{
+    "name": "Beja-Sales-Connector",
+    "config": {
+      "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+      "tasksMax": 1,
+      "database.hostname": "Beja_Host",
+      "database.port": "3306",
+      "database.user": "root",
+      "database.password": "secret",
+      "database.server.id": "2",
+      "database.whitelist": "beja_sales_db",
+      "table.whitelist": "beja_sales_db.beja_sales",
+      "topic.prefix": "BejaSales",
+      "schema.history.internal.kafka.bootstrap.servers": "kafka:9092",
+      "schema.history.internal.kafka.topic": "schemahistory.beja_sales_database"
+    }
+  }  
